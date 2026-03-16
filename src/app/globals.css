@@ -1,26 +1,202 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --color-bg: #f0eee9;
+  --color-bg-card: #f7f6f3;
+  --color-bg-elevated: #e8e5df;
+  --color-bg-warm: #e4e0d8;
+  --color-border: rgba(0, 0, 0, 0.08);
+  --color-border-hover: rgba(0, 0, 0, 0.15);
+  --color-text: #1a1a1a;
+  --color-text-muted: #6b6b6b;
+  --color-text-light: #999999;
+  --color-accent: #c45a3c;
+  --color-accent-hover: #b04e33;
+  --color-accent-dim: rgba(196, 90, 60, 0.08);
+  --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+::selection {
+  background: var(--color-accent-dim);
+  color: var(--color-accent);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.12);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Lesson content prose styles */
+.lesson-content h2 {
+  font-size: 1.375rem;
+  font-weight: 600;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+}
+
+.lesson-content p {
+  margin-bottom: 1.25rem;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  font-size: 1.0625rem;
+}
+
+.lesson-content strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.lesson-content ul,
+.lesson-content ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.lesson-content li {
+  margin-bottom: 0.5rem;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  font-size: 1.0625rem;
+}
+
+.lesson-content blockquote {
+  border-left: 2px solid var(--color-accent);
+  padding-left: 1.25rem;
+  margin: 2rem 0;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+/* Code blocks — for prompts, commands, and config */
+.lesson-content .code-block {
+  margin: 1.5rem 0;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--color-bg-card);
+}
+
+.lesson-content .code-block-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background: var(--color-bg-elevated);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.lesson-content .code-block-lang {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.lesson-content .code-copy-btn {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-accent);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: background 0.15s;
+}
+
+.lesson-content .code-copy-btn:hover {
+  background: var(--color-accent-dim);
+}
+
+.lesson-content pre {
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  margin: 0;
+}
+
+.lesson-content pre code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  background: none;
+  padding: 0;
+}
+
+/* Inline code */
+.lesson-content .inline-code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+  font-size: 0.875em;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  color: var(--color-text);
+}
+
+/* Images / screenshots */
+.lesson-content .lesson-figure {
+  margin: 2rem 0;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--color-bg-card);
+}
+
+.lesson-content .lesson-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.lesson-content .lesson-figure figcaption {
+  padding: 0.75rem 1rem;
+  font-size: 0.8125rem;
+  color: var(--color-text-light);
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+}
+
+/* Download links */
+.lesson-content .download-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1rem;
+  margin: 0.5rem 0;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  color: var(--color-accent);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.lesson-content .download-link:hover {
+  border-color: var(--color-accent);
+  background: var(--color-accent-dim);
 }
