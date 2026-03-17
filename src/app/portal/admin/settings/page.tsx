@@ -59,9 +59,11 @@ export default async function SettingsPage() {
 
   // Check connection status
   const resendKey = settings.find((s) => s.key === "RESEND_API_KEY")?.value;
-  const twilioSid = settings.find(
-    (s) => s.key === "TWILIO_ACCOUNT_SID"
-  )?.value;
+
+  // Filter out SMS/Twilio settings since we're email-only
+  const filteredGroups = Object.fromEntries(
+    Object.entries(groups).filter(([group]) => group !== "sms")
+  );
 
   return (
     <div>
@@ -73,8 +75,8 @@ export default async function SettingsPage() {
       </div>
 
       {/* Connection status */}
-      <div className="grid grid-cols-2 gap-3 mb-8">
-        <div className="bg-bg-card border border-border rounded-xl p-4 flex items-center gap-3">
+      <div className="mb-8">
+        <div className="bg-bg-card border border-border rounded-xl p-4 flex items-center gap-3 max-w-sm">
           <span
             className={`w-2.5 h-2.5 rounded-full flex-shrink-0 ${
               resendKey ? "bg-green-500" : "bg-red-400"
@@ -87,24 +89,11 @@ export default async function SettingsPage() {
             </p>
           </div>
         </div>
-        <div className="bg-bg-card border border-border rounded-xl p-4 flex items-center gap-3">
-          <span
-            className={`w-2.5 h-2.5 rounded-full flex-shrink-0 ${
-              twilioSid ? "bg-green-500" : "bg-red-400"
-            }`}
-          />
-          <div>
-            <p className="text-sm font-medium">SMS (Twilio)</p>
-            <p className="text-xs text-text-muted">
-              {twilioSid ? "Connected" : "Not configured"}
-            </p>
-          </div>
-        </div>
       </div>
 
       <form action={saveSettings}>
         <div className="space-y-8">
-          {Object.entries(groups).map(([group, groupSettings]) => (
+          {Object.entries(filteredGroups).map(([group, groupSettings]) => (
             <div key={group}>
               <div className="mb-4">
                 <h2 className="text-sm font-semibold">

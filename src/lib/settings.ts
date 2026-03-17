@@ -52,19 +52,6 @@ export async function seedDefaultSettings(): Promise<void> {
       group: "email",
     },
 
-    // SMS (Twilio)
-    {
-      key: "TWILIO_ACCOUNT_SID",
-      label: "Twilio Account SID",
-      group: "sms",
-    },
-    { key: "TWILIO_AUTH_TOKEN", label: "Twilio Auth Token", group: "sms" },
-    {
-      key: "TWILIO_PHONE_NUMBER",
-      label: "Twilio Phone Number",
-      group: "sms",
-    },
-
     // General
     {
       key: "NEXT_PUBLIC_SITE_URL",

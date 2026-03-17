@@ -108,22 +108,7 @@ async function sendEmail(to: string, subject: string, body: string) {
   await resend.emails.send({ from, to, subject, text: body });
 }
 
-async function sendSMS(to: string, body: string) {
-  const sid = await getSetting("TWILIO_ACCOUNT_SID");
-  if (!sid) {
-    console.log(`[SMS PREVIEW] To: ${to}`);
-    console.log(body + "\n");
-    return;
-  }
-
-  const token = await getSetting("TWILIO_AUTH_TOKEN");
-  const from = await getSetting("TWILIO_PHONE_NUMBER");
-
-  const twilio = await import("twilio");
-  const client = twilio.default(sid, token);
-
-  await client.messages.create({ body, from, to });
-}
+// SMS removed — email only for now. SMS requires A2P 10DLC verification.
 
 // ============================================
 // CONTEXT BUILDER
@@ -249,12 +234,10 @@ export async function runAutomation(trigger: string, userId: string) {
       const message = await resolveTemplate(template, ctx);
 
       try {
-        if (channel === "email" && user.email) {
+        // Email only — SMS removed (requires A2P verification)
+        if (template.channel === "email" && user.email) {
           await sendEmail(user.email, message.subject || "", message.body);
-        } else if (channel === "sms" && user.phone) {
-          await sendSMS(user.phone, message.body);
         } else {
-          // No contact info for this channel
           continue;
         }
 
