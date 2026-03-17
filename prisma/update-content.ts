@@ -88,6 +88,8 @@ And if you want the perfect example of this type of lead magnet?
 
 You're literally inside it.
 
+![The landing page you saw before signing up](/lessons/screenshots/landing-hero.png)
+
 This entire training platform — the structure, the design, the writing, the flow, the content you're reading right now — was built with Claude Code. Every page. Every lesson. The signup flow, the progress tracking, the behavior monitoring that personalizes your experience.
 
 All of it. Built with Claude Code.
@@ -97,6 +99,8 @@ And you're experiencing exactly the kind of asset your future prospects will exp
 That's the beauty of this system.
 
 You're learning by stepping directly into the machine you're going to build yourself.
+
+![Your portal — progress tracking, modules, and lessons](/lessons/screenshots/portal-dashboard.png)
 
 When you finish this course, you'll download a boilerplate version of this exact platform and rebuild it for your business using Claude Code. Same stack. Same architecture. Your content. Your audience.
 
@@ -199,6 +203,20 @@ This is architecture, not tactics.
 The entire Client Engine is made up of five connected components.
 
 Each one is simple on its own. The power comes from how they work together.
+
+\`\`\`
+┌─────────────┐     ┌─────────────────┐     ┌────────────────┐     ┌──────────┐     ┌──────────────┐
+│  TRAFFIC IN  │────▶│  LEAD MAGNET    │────▶│ NURTURE ENGINE │────▶│ BOOKING  │────▶│ FEEDBACK     │
+│              │     │  (Course        │     │ (Email + SMS   │     │ LAYER    │     │ LOOP         │
+│ • Outreach   │     │   Platform)     │     │  Behavior-     │     │          │     │              │
+│ • Ads        │     │                 │     │  Triggered)    │     │ Calendar │     │ Data feeds   │
+│ • Content    │     │ Signup ▶ Learn  │     │                │     │ + Qual   │     │ back into    │
+│ • Referrals  │     │ ▶ Engage       │     │ Cold ▶ Warm    │     │ Gate     │     │ the system   │
+│              │     │                 │     │ ▶ Ready        │     │          │     │              │
+└─────────────┘     └─────────────────┘     └────────────────┘     └──────────┘     └──────────────┘
+                                                                                            │
+                            ◀───────────────────────────────────────────────────────────────┘
+\`\`\`
 
 **Component One: Traffic In**
 
@@ -326,6 +344,21 @@ If that sentence feels awkward, unclear, or complicated, you need to refine it.
 
 If it feels obvious and boring, you're probably doing it right.
 
+Open Claude and use this prompt to help you nail it down:
+
+\`\`\`prompt
+I need help crafting my core offer statement. Here's my background:
+
+- I currently help [describe who you help]
+- The main problem I solve is [describe the problem]
+- The result I deliver is [describe the outcome]
+
+Help me complete this sentence in the simplest, most direct way possible:
+"I help ___ get ___ without ___."
+
+Give me 5 variations. Keep them short, clear, and jargon-free. A stranger should understand each one in under 5 seconds.
+\`\`\`
+
 ## Action Items
 
 Write your "I help ___ get ___ without ___" sentence. Say it out loud. If it takes more than five seconds to say, simplify it.
@@ -400,6 +433,28 @@ Then ask it one simple question.
 
 Do not ask for copy. Do not ask for emails. Ask for thinking.
 
+Here's the truth list prompt — copy this and fill in the blanks:
+
+\`\`\`prompt
+I need you to think like a strategist, not a copywriter.
+
+My business: [describe what you do]
+My audience: [describe who you serve]
+The outcome I sell: [describe the result clients get]
+
+What does this person need to believe, understand, and trust before they are ready to buy from me?
+
+Give me a raw, honest list of:
+- What they currently misunderstand about this problem
+- What they overestimate about solving it themselves
+- What they underestimate about the cost of doing nothing
+- What they are skeptical about
+- What they fear
+- What they need clarity on before they'll take action
+
+Be blunt. No fluff. No marketing speak. Just the raw truth about what's standing between them and buying.
+\`\`\`
+
 You want a raw list of: What they misunderstand. What they overestimate. What they underestimate. What they are skeptical about. What they fear. What they need clarity on.
 
 This becomes your truth list.
@@ -407,6 +462,20 @@ This becomes your truth list.
 Once you have that list, group it. Not by topic. By sequence.
 
 What do they need to understand first? What only makes sense after that? What needs repetition? What needs proof?
+
+Use this prompt to sequence your truth list:
+
+\`\`\`prompt
+Here's my truth list — the things my audience needs to believe before they'll buy:
+
+[paste your truth list here]
+
+Now organize this into a belief sequence. What do they need to understand FIRST before anything else makes sense? What builds on that? What only lands after trust is established?
+
+Group these into 3-5 phases. Each phase should build on the last. Label each phase with what it accomplishes (e.g., "Phase 1: Break the old mental model" or "Phase 2: Show what's actually possible").
+
+This sequence will become the backbone of my lead magnet content.
+\`\`\`
 
 Now you are no longer guessing. You are sequencing belief.
 
@@ -417,6 +486,30 @@ Discovery → Value → Trust → Readiness → Conversation
 Under each stage, write what must happen.
 
 Then assign responsibilities. The lead magnet handles value. The nurture handles trust. Behavior signals handle readiness. The calendar handles conversation.
+
+Use this prompt to map it all together:
+
+\`\`\`prompt
+I'm building an automated client acquisition system. Here's my belief sequence:
+
+[paste your sequenced truth list]
+
+Now map this to a 5-stage client flow:
+
+1. Discovery — How do they find me?
+2. Value — What do I give them for free that earns attention?
+3. Trust — What builds credibility over time?
+4. Readiness — What signals tell me they're ready to buy?
+5. Conversation — How do I get them on a call?
+
+For each stage, tell me:
+- What the prospect experiences
+- What the system does automatically
+- What content or messaging is needed
+- What behavior signals to track
+
+Be specific. Use my actual business context, not generic advice.
+\`\`\`
 
 Once your Client Engine is mapped, building becomes mechanical.
 
@@ -469,6 +562,29 @@ Next.js handles the frontend — what people see and interact with. Prisma handl
 You don't need to understand these deeply. Claude Code does. But it helps to know what they are so you're not lost when you see file names and folder structures.
 
 The boilerplate you'll download already has all of this set up. You clone it, run a few commands, and you have a working platform on your local machine.
+
+Here's a preview of the setup commands you'll run in Module 2:
+
+\`\`\`bash
+# Clone the boilerplate
+git clone [boilerplate-repo-url] my-client-engine
+cd my-client-engine
+
+# Install dependencies
+npm install
+
+# Set up environment variables
+cp .env.example .env
+
+# Set up the database
+npx prisma migrate dev
+npx prisma db seed
+
+# Start the platform
+npm run dev
+\`\`\`
+
+> Don't run these yet — we'll walk through each step in detail in Lesson 7. This is just so you can see how simple the setup actually is.
 
 ## The CRM and Automation Layer
 
@@ -558,11 +674,17 @@ So let's break down what you're experiencing, piece by piece.
 
 Before you signed up, you saw a landing page. It led with value, not a pitch. It told you what you'd learn, not what you'd buy. It positioned the free training as the main event — not a teaser for something behind a paywall.
 
+![The landing page — value-first, no pitch](/lessons/screenshots/landing-hero.png)
+
 That's intentional. The landing page exists to make signing up feel like a no-brainer.
+
+![Full landing page layout](/lessons/screenshots/landing-full.png)
 
 **The Signup Flow**
 
 Simple. Name, email or phone, password. No credit card. No 47-field form. No friction.
+
+![The signup page — minimal fields, zero friction](/lessons/screenshots/signup-page.png)
 
 Every extra field you add kills conversions. Keep it minimal.
 
@@ -570,17 +692,25 @@ Every extra field you add kills conversions. Keep it minimal.
 
 Once you're in, you see modules, lessons, and your progress. You know where you are. You know what's next. There's a sense of structure and momentum.
 
+![Your portal after logging in — modules and progress](/lessons/screenshots/portal-dashboard.png)
+
 This matters more than people think. Progress bars and completion states create psychological commitment. The more someone completes, the more invested they feel.
+
+![Progress tracking keeps people coming back](/lessons/screenshots/portal-progress.png)
 
 **Sequential Lessons That Build Trust**
 
 The lessons are gated sequentially. You go through them in order. Each one builds on the last.
+
+![A module page showing the lesson sequence](/lessons/screenshots/module-page.png)
 
 This isn't about control. It's about belief sequencing — the idea from Lesson 4. You deliver information in the order that builds maximum trust and understanding.
 
 **The Booking CTA**
 
 Notice where the "Book a Consultation" button appears. It's not slapped on every page. It shows up contextually — after someone has consumed enough content to understand what you do and why it matters.
+
+![The booking CTA — contextual, not pushy](/lessons/screenshots/consultation-cta.png)
 
 This is the difference between a CTA that converts and one that gets ignored.
 
@@ -648,7 +778,7 @@ Claude Code runs on Node.js. If you don't have it installed, go to nodejs.org an
 
 To verify it's installed, open your terminal and type:
 
-\`\`\`
+\`\`\`bash
 node --version
 \`\`\`
 
@@ -658,7 +788,7 @@ You should see a version number. If you do, you're good.
 
 In your terminal, run:
 
-\`\`\`
+\`\`\`bash
 npm install -g @anthropic-ai/claude-code
 \`\`\`
 
@@ -674,7 +804,7 @@ Copy that key. You'll need it in a minute.
 
 In your terminal, run:
 
-\`\`\`
+\`\`\`bash
 claude
 \`\`\`
 
@@ -688,7 +818,7 @@ The Client Engine boilerplate is a pre-built version of this platform. It has th
 
 Clone it from the repository:
 
-\`\`\`
+\`\`\`bash
 git clone [boilerplate-repo-url] my-client-engine
 cd my-client-engine
 \`\`\`
@@ -699,7 +829,7 @@ Replace \`[boilerplate-repo-url]\` with the actual URL you'll receive. Replace \
 
 Once you're inside the project directory, run these commands in order:
 
-\`\`\`
+\`\`\`bash
 npm install
 \`\`\`
 
@@ -707,7 +837,7 @@ This installs all the project dependencies. Takes about a minute.
 
 Next, set up your environment variables. Copy the example env file:
 
-\`\`\`
+\`\`\`bash
 cp .env.example .env
 \`\`\`
 
@@ -715,7 +845,7 @@ Open the \`.env\` file and fill in your database URL. If you're using Neon (reco
 
 Then run the database setup:
 
-\`\`\`
+\`\`\`bash
 npx prisma migrate dev
 npx prisma db seed
 \`\`\`
@@ -724,7 +854,7 @@ The first command creates all the database tables. The second command populates 
 
 Finally, start the development server:
 
-\`\`\`
+\`\`\`bash
 npm run dev
 \`\`\`
 
@@ -749,15 +879,17 @@ When you use Claude Code, it understands all of this automatically. You don't ne
 
 Let's test it. Make sure you're in your project directory, then run:
 
-\`\`\`
+\`\`\`bash
 claude
 \`\`\`
 
 Claude Code will start up and read your project. It now understands the entire codebase.
 
-Try telling it something simple:
+Try telling it something simple like this:
 
-"Change the platform name in the landing page header to [Your Business Name]"
+\`\`\`prompt
+Change the platform name in the landing page header to [Your Business Name]. Update it everywhere it appears — the nav bar, the page title, the footer.
+\`\`\`
 
 Watch what happens. It finds the right file. It makes the change. It shows you what it did. You approve it.
 
@@ -809,25 +941,31 @@ See the difference? Same request. Wildly different result.
 
 Start with the basics. Open Claude Code in your project directory:
 
-\`\`\`
+\`\`\`bash
 claude
 \`\`\`
 
-Then tell it:
+Then use a prompt like this:
 
-"Update the platform name from 'The Client Engine' to '[Your Platform Name]' everywhere it appears — landing page, navigation, page titles, footer, and metadata."
+\`\`\`prompt
+Update the platform name from 'The Client Engine' to '[Your Platform Name]' everywhere it appears — landing page, navigation, page titles, footer, and metadata. Also update the meta description and og:title tags.
+\`\`\`
 
 Claude Code will find every instance and update it. It'll show you the changes. You approve them.
 
 Next, update the tagline and landing page copy:
 
-"Rewrite the landing page hero section. My audience is [who they are]. My platform teaches them [what it teaches]. The tone should be direct, confident, and value-first. No hype."
+\`\`\`prompt
+Rewrite the landing page hero section. My audience is [who they are]. My platform teaches them [what it teaches]. The tone should be direct, confident, and value-first. No hype. No buzzwords. Keep the layout and structure the same — just update the text.
+\`\`\`
 
 ## Updating Colors and Visual Style
 
 The boilerplate uses a default color scheme. You'll want to match your brand.
 
-"Update the color scheme across the entire platform. Primary color: [hex code]. Accent color: [hex code]. Background: [hex code]. Make sure buttons, links, navigation, and headings all use the new palette consistently."
+\`\`\`prompt
+Update the color scheme across the entire platform. Primary color: [hex code]. Accent color: [hex code]. Background: [hex code]. Make sure buttons, links, navigation, and headings all use the new palette consistently. Update the Tailwind config and any hardcoded color values.
+\`\`\`
 
 Claude Code will update the Tailwind config and any hardcoded colors throughout the app.
 
@@ -840,11 +978,15 @@ It needs to do three things:
 2. Make it feel valuable enough to sign up for
 3. Make signing up effortless
 
-Here's an example prompt:
-
-"Rewrite the landing page for my platform. My audience is [target audience]. The free training teaches them [what it teaches]. Emphasize that it's free, it's structured, and it's built to help them [specific outcome]. Keep the design layout the same but update all the copy."
-
 Don't try to be clever with the landing page. Be clear. Tell people exactly what they get. Make the signup button obvious.
+
+## Setting Up Your CLAUDE.md File
+
+Before you go further, set up your voice guide. This file tells Claude Code how to write for your brand across the entire project.
+
+[Download the CLAUDE.md voice/style template](/lessons/downloads/claude-md-template.md){.download}
+
+Drop this file in your project root and customize it with your voice, audience, and style rules. Every time Claude Code runs, it reads this file first — so your brand voice stays consistent across everything it writes.
 
 ## Connecting a Custom Domain
 
@@ -945,9 +1087,27 @@ Second, engagement data. Sequential gating gives you clean data on where people 
 
 ## Using Claude Code to Generate Your Structure
 
-Open Claude Code and tell it:
+Open Claude Code and use this prompt:
 
-"I need to create a course structure for my lead magnet. My audience is [who]. The training teaches them [what]. Here's my truth list: [paste your truth list from Lesson 4]. Create a module and lesson structure with titles, subtitles, and read times. 3-5 modules, 3-5 lessons per module."
+\`\`\`prompt
+I need to create a course structure for my lead magnet platform.
+
+My audience: [who they are]
+What the training teaches: [the core topic]
+The outcome for the learner: [what they'll be able to do after]
+
+Here's my truth list from my planning session:
+[paste your truth list from Lesson 4]
+
+Create a module and lesson structure with:
+- 3-5 modules, each with a clear theme
+- 3-5 lessons per module
+- A title and subtitle for each lesson
+- Estimated read time (3-7 min each)
+- A one-sentence description of what each lesson accomplishes
+
+The sequence should follow the belief-building order: break old assumptions first, then teach the new way, then show proof, then make the offer feel like a natural next step.
+\`\`\`
 
 Claude Code will generate the entire structure. Review it. Adjust the order if needed. Rename anything that feels off.
 
@@ -991,6 +1151,10 @@ This is the single most important thing you'll create for content quality.
 
 A CLAUDE.md file sits in your project root and gives Claude Code persistent instructions. Every time Claude Code runs, it reads this file first. Think of it as programming Claude's personality for your project.
 
+[Download the CLAUDE.md voice/style template](/lessons/downloads/claude-md-template.md){.download}
+
+If you downloaded this in the last lesson, great — make sure it's customized. If not, grab it now and fill it in before you write a single lesson.
+
 Create a file called \`CLAUDE.md\` in your project root. Here's what to put in it:
 
 \`\`\`
@@ -1011,9 +1175,22 @@ Don't write this in corporate speak. Write it how you actually talk. If you curs
 
 ## Writing Your First Lesson
 
-Open Claude Code in your project directory. Then:
+Open Claude Code in your project directory. Then use a prompt like this:
 
-"Write the full content for Lesson 1: [Title]. This is in Module 1: [Module Title]. The lesson should be [read time] worth of content. The audience is [who]. The lesson should teach them [what]. Use the voice instructions from CLAUDE.md. Use ## for section headers. End with action items."
+\`\`\`prompt
+Write the full content for Lesson 1: [Title].
+This is in Module 1: [Module Title].
+
+The lesson should be [read time] worth of content (about [word count] words).
+The audience is [who they are].
+This lesson should teach them [what this specific lesson covers].
+
+Use the voice instructions from CLAUDE.md.
+Use ## for section headers.
+End with action items — specific things they should do before moving to the next lesson.
+
+Important: Write like a human, not a textbook. One idea per paragraph. Short sentences mixed with longer ones. No filler. No throat-clearing intros. Get to the point fast and keep it useful.
+\`\`\`
 
 Claude Code will write the entire lesson.
 
@@ -1119,6 +1296,8 @@ Same platform. Same content. Completely different follow-up paths.
 
 That's behavior-based nurture.
 
+![The portal tracks every action — progress, completions, engagement](/lessons/screenshots/portal-progress.png)
+
 ## The Three Lead States
 
 Every lead in your system is in one of three states at any given time.
@@ -1138,6 +1317,8 @@ These leads don't need much intervention. The content is doing the work. Light e
 **Ready: High engagement plus CTA interaction.**
 
 They've completed a significant chunk of the content. They've clicked the booking CTA or visited the consultation page. They're behaving like someone who's about to buy.
+
+![The consultation CTA — appears at the right moment](/lessons/screenshots/consultation-cta.png)
 
 These leads need a personalized, well-timed booking invitation. Not a generic "let's chat" email. Something specific to their situation.
 
@@ -1261,7 +1442,9 @@ Here's where Claude Code earns its keep.
 
 Open Claude Code in your project and tell it:
 
-"Add webhook integration to the platform. When a user completes a lesson, send a POST request to this webhook URL: [your GHL webhook URL]. Include the user's email, the lesson title, and the total lessons completed."
+\`\`\`prompt
+Add webhook integration to the platform. When a user completes a lesson, send a POST request to this webhook URL: [your GHL webhook URL]. Include the user's email, name, the lesson title, the lesson number, and the total lessons completed. Handle errors gracefully — if the webhook fails, log the error but don't break the user experience.
+\`\`\`
 
 Claude Code will write the integration. It'll add the webhook call to the lesson completion handler. It'll format the data correctly. It'll handle errors.
 
@@ -1312,6 +1495,10 @@ Most people write email sequences by vibes. They sit down and write whatever fee
 That's not a system. That's a prayer.
 
 Every email in your sequence has a specific role. A reason it exists. A job it needs to do. When each email does its job, the sequence as a whole moves people from "just signed up" to "ready to book."
+
+[Download the 6-email nurture sequence template](/lessons/downloads/email-sequence-template.md){.download}
+
+> This template has the full framework with fill-in-the-blank sections for each email. Use it as your starting point, then customize with Claude Code.
 
 ## The Six Email Roles
 
@@ -1385,7 +1572,31 @@ If six emails don't convert someone, twenty won't either. The problem isn't volu
 
 Open Claude Code and give it this prompt:
 
-"Write a 6-email nurture sequence for my business. My audience is [who]. My service is [what]. The sequence should follow this structure: Email 1 teaches, Email 2 reframes, Email 3 proves, Email 4 addresses skepticism, Email 5 introduces the service, Email 6 invites conversation. Each email should be 150-300 words. Casual tone. No hype. No fake urgency. Use the voice from CLAUDE.md."
+\`\`\`prompt
+Write a 6-email nurture sequence for my business.
+
+My audience: [who they are]
+My service: [what you offer]
+The free training teaches: [what your platform covers]
+My voice: [reference CLAUDE.md or describe briefly]
+
+The sequence structure:
+- Email 1: Teach — deliver one genuinely useful insight
+- Email 2: Reframe — challenge a common assumption
+- Email 3: Prove — share a result or case study
+- Email 4: Address Skepticism — name and dissolve the top objection
+- Email 5: Introduce Service — explain what you do (no hard sell)
+- Email 6: Invite Conversation — simple booking CTA
+
+Rules:
+- Each email should be 150-300 words
+- Casual, direct tone
+- No hype, no fake urgency, no ALL CAPS
+- Write subject lines that are 3-7 words, curiosity-driven
+- Emails 1-4: CTA is "continue the training" (link back to platform)
+- Email 5: CTA is "learn more about working together"
+- Email 6: CTA is "book a call" with direct booking link
+\`\`\`
 
 Review each email. Edit for voice. Cut anything that sounds like marketing fluff.
 
@@ -1453,7 +1664,9 @@ You need exactly three text messages in your system. That's it.
 
 Sent immediately after signup. This is a handshake.
 
-"Hey [name] — thanks for signing up for [platform name]. Your first lesson is ready whenever you are. Here's the link: [link]"
+\`\`\`prompt
+Hey [name] — thanks for signing up for [platform name]. Your first lesson is ready whenever you are: [link]
+\`\`\`
 
 Short. Friendly. Useful. It gives them a direct link to get started and confirms their signup worked.
 
@@ -1463,7 +1676,9 @@ Sent when a lead goes dark. They signed up, maybe completed a lesson or two, the
 
 Timing: 3-5 days of inactivity.
 
-"Hey [name] — noticed you haven't been back to [platform name] in a few days. Lesson [X] is a good one. Worth checking out when you have 5 min: [link]"
+\`\`\`prompt
+Hey [name] — noticed you haven't been back to [platform name] in a few days. Lesson [X] is a good one. Worth checking out when you have 5 min: [link]
+\`\`\`
 
 This is not a guilt trip. It's a friendly reminder. The key is referencing a specific lesson — it feels personal and gives them a concrete reason to come back.
 
@@ -1471,9 +1686,15 @@ This is not a guilt trip. It's a friendly reminder. The key is referencing a spe
 
 Sent after someone books a call. This is pure logistics.
 
-"Hey [name] — just confirming your call tomorrow at [time]. Looking forward to it."
+\`\`\`prompt
+Hey [name] — just confirming your call tomorrow at [time]. Looking forward to it.
+\`\`\`
 
-Then a second one an hour before: "Quick reminder — we're on in an hour. Here's the link: [link]"
+Then a second one an hour before:
+
+\`\`\`prompt
+Quick reminder — we're on in an hour. Here's the link: [link]
+\`\`\`
 
 These reduce no-shows dramatically. A text reminder an hour before a call is the single most effective no-show prevention tactic that exists.
 
@@ -1540,6 +1761,37 @@ This lesson is about building conditional branches that make your nurture engine
 
 You don't need twenty conditional paths. You need three.
 
+\`\`\`
+                         ┌─────────────────────────┐
+                         │      LEAD SIGNS UP       │
+                         └────────────┬──────────────┘
+                                      │
+                              ┌───────▼───────┐
+                              │  MONITOR      │
+                              │  BEHAVIOR     │
+                              └───┬───┬───┬───┘
+                                  │   │   │
+                    ┌─────────────┘   │   └─────────────┐
+                    │                 │                   │
+              ┌─────▼─────┐   ┌──────▼──────┐   ┌───────▼───────┐
+              │  FAST      │   │  STALLER    │   │  ALMOST       │
+              │  MOVER     │   │             │   │  BOOKED       │
+              │            │   │  No activity│   │               │
+              │  60%+ in   │   │  for 5+     │   │  Clicked CTA  │
+              │  3 days    │   │  days       │   │  but didn't   │
+              │            │   │             │   │  book         │
+              └─────┬──────┘   └──────┬──────┘   └───────┬───────┘
+                    │                 │                   │
+              ┌─────▼──────┐   ┌──────▼──────┐   ┌───────▼───────┐
+              │  Skip edu  │   │  3 re-engage│   │  24hr wait    │
+              │  emails    │   │  emails over│   │  then send    │
+              │  → Direct  │   │  10 days    │   │  personal     │
+              │  booking   │   │  → Monthly  │   │  follow-up    │
+              │  invite    │   │  drip if no │   │  with booking │
+              │            │   │  response   │   │  link         │
+              └────────────┘   └─────────────┘   └───────────────┘
+\`\`\`
+
 **Branch 1: The Fast Mover**
 
 Trigger: Lead completes 60%+ of lessons within the first 3 days.
@@ -1584,11 +1836,16 @@ Do the same for Branches 2 and 3 using their respective triggers.
 
 Your platform needs to send the right data to make these branches work. Open Claude Code:
 
-"Add event tracking to the platform. Track these events and send webhooks to GHL:
-- lesson_completed (include lesson number and total lessons completed)
-- booking_cta_clicked (include timestamp)
-- user_inactive (fire if no activity for 48+ hours — this should run as a scheduled job)
-- course_progress_milestone (fire when user hits 25%, 50%, 75%, 100% completion)"
+\`\`\`prompt
+Add event tracking to the platform. Track these events and send webhooks to GHL:
+
+1. lesson_completed — include lesson number, lesson title, and total lessons completed out of total available
+2. booking_cta_clicked — include user email and timestamp
+3. user_inactive — fire if no activity for 48+ hours (run as a daily scheduled job, check all users)
+4. course_progress_milestone — fire when user hits 25%, 50%, 75%, 100% completion
+
+For each event, send a POST request to the GHL webhook URL stored in the WEBHOOK_URL environment variable. Include the user's email as the primary identifier.
+\`\`\`
 
 Claude Code will add the tracking code and webhook calls. Test each one.
 
@@ -1678,9 +1935,23 @@ Or: "See how [your system/service] works for [their situation]."
 
 The copy below the headline should set expectations. How long is the call? What will you cover? What should they prepare?
 
-Example:
+Use this prompt to write your booking page copy:
 
-"This is a 30-minute call where we'll look at your current [process/system/situation], identify the biggest gaps, and show you exactly how [your service] would work for your business. No pressure. No pitch. If it's a fit, we'll talk about next steps. If not, you'll still walk away with a clear action plan."
+\`\`\`prompt
+Write the copy for my booking/consultation page.
+
+My audience: [who they are]
+My service: [what you offer]
+Call length: 30 minutes
+
+The page needs:
+1. A headline that's specific to the outcome, not generic
+2. 3-5 sentences setting expectations for the call
+3. A brief list of what we'll cover
+4. A reassurance line (no pressure, no pitch)
+
+Tone: direct, confident, no hype. This person has already consumed my free training — they know what I do. Don't over-explain. Just make booking feel like the obvious next step.
+\`\`\`
 
 Then the calendar. Clean. Simple. Available slots visible. Book in two clicks.
 
@@ -1721,7 +1992,9 @@ Set up a calendar in GHL:
 
 If you want the booking experience to live directly inside your platform, Claude Code can build it.
 
-"Build a booking page inside the platform. Show available time slots for the next 2 weeks. When someone books, send a confirmation email via Resend and create a webhook event to GHL. Only show the booking page to users who have completed at least [X] lessons."
+\`\`\`prompt
+Build a booking page inside the platform. Show available time slots for the next 2 weeks based on my availability (weekdays 10am-3pm EST). When someone books, send a confirmation email via Resend and fire a webhook to GHL with the user's email, selected time, and booking status. Only show the booking page to users who have completed at least [X] lessons — redirect others back to their current lesson.
+\`\`\`
 
 This gives you a seamless experience — the lead never leaves your platform to book. It's more work to set up, but it looks more professional and gives you more control.
 
@@ -1830,19 +2103,26 @@ This email is important. It's not a generic "let's hop on a call" message.
 
 It should feel like a natural extension of the content they've been consuming.
 
-Template:
+Use this prompt to write yours:
 
-"Hey [name],
+\`\`\`prompt
+Write a booking invitation email for my business.
 
-You've made it through [X lessons / the core training / Module 3] — so you already understand [key concept from the training].
+Context: The recipient has completed [X]% of my free training on [topic]. They've been actively engaging with the content for [X days]. They understand the problem and have seen how the solution works.
 
-Most [audience type] stop here and try to figure it out on their own. Some make progress. Most stall.
+My audience: [who they are]
+My service: [what you offer]
+Booking link: [your link]
 
-If you want to talk through how [your service] works for your specific situation, I'd be happy to walk you through it. No pitch, no pressure. Just a straight conversation about what would actually work for you.
+The email should:
+1. Acknowledge their progress through the training (be specific)
+2. Reference a key concept they've learned
+3. Position the call as a natural next step, not a pitch
+4. Be under 150 words
+5. Sound like a real person wrote it, not a marketing automation
 
-Here's my calendar: [booking link]
-
-[Your name]"
+Tone: casual, direct, zero pressure. If they're not ready, that's fine. But make booking feel easy and obvious for those who are.
+\`\`\`
 
 Notice what this email does. It acknowledges their progress. It references the content. It positions the call as a natural next step, not a sales pitch.
 
@@ -1870,7 +2150,9 @@ Beyond email, you can show a booking CTA directly inside the platform — but on
 
 Open Claude Code:
 
-"Add a conditional booking CTA to the lesson pages. Only show it to users who have completed at least [X] lessons. The CTA should say '[Your CTA text]' and link to the booking page. Track when users click it and send a webhook to GHL."
+\`\`\`prompt
+Add a conditional booking CTA to the lesson pages. Only show it to users who have completed at least [X] lessons. The CTA should appear below the lesson content with the text "Ready to talk about implementing this for your business?" and a button that says "Book a Free Consultation" linking to [booking URL]. Track when users click it and send a webhook to GHL with the user's email and a "booking_cta_clicked" event type.
+\`\`\`
 
 Now your most engaged leads see a booking option right inside the learning experience, exactly when they're most engaged.
 
@@ -2063,6 +2345,10 @@ Start with one. Get it working. Then add a second channel. Then a third.
 
 Multi-channel traffic is the goal. But you get there by mastering one channel at a time, not by doing five things poorly.
 
+[Download the cold outreach templates — email + LinkedIn](/lessons/downloads/outreach-templates.md){.download}
+
+> These templates give you copy-paste outreach messages for both email and LinkedIn. Customize them for your audience and platform.
+
 ## Action Items
 
 Choose your primary traffic channel. Write it down. Commit to it for the next 30 days.
@@ -2088,6 +2374,8 @@ They send pitches to strangers. They write long emails about themselves. They fo
 That approach is dead. Spam filters are better. People are more skeptical. And nobody responds to "I'd love to pick your brain" from someone they've never heard of.
 
 But cold outreach that offers something genuinely valuable? That still works. Really well.
+
+[Download the cold outreach templates — email + LinkedIn](/lessons/downloads/outreach-templates.md){.download}
 
 ## Building Your Lead List
 
@@ -2154,7 +2442,17 @@ Here's where Claude Code gets interesting for outreach.
 
 You can feed it your prospect list and have it personalize each message based on the prospect's company, role, or industry.
 
-"I have a list of 50 prospects. For each one, personalize Message 1 of my outreach sequence. Use their company name and reference something specific about their industry. Keep the core message the same. Here's the template: [template]. Here's the list: [list]."
+\`\`\`prompt
+I have a list of 50 prospects for cold outreach. For each one, personalize Message 1 of my outreach sequence.
+
+Here's my template:
+"Hey [name], we built a free [training type] that helps [audience] [outcome]. It covers [topics]. Completely free — thought it might be useful for you. Here's the link: [link]"
+
+For each prospect, add one personalized sentence before the template that references something specific about their company or role. Keep it natural — not creepy-specific, just enough to show I looked them up.
+
+Here's the prospect list:
+[paste your CSV or list with name, company, role, industry]
+\`\`\`
 
 Claude Code will generate 50 personalized versions. Each one feels hand-written. None of them are.
 
@@ -2251,9 +2549,26 @@ That's it. Every post feeds the engine.
 
 ## Using Claude Code to Batch-Produce Content
 
-Open Claude Code:
+Open Claude Code and use this prompt:
 
-"Using the content from my platform lessons, create 15 LinkedIn posts. 5 teaching posts, 5 behind-the-scenes posts, 5 results posts. Each post should be 100-200 words. End each one with a CTA pointing to [platform URL]. Use the voice from CLAUDE.md."
+\`\`\`prompt
+Using the content from my platform lessons, create 15 LinkedIn posts for the next 3 weeks.
+
+Break them down as:
+- 5 teaching posts (pull one key insight from a lesson and make it a standalone post)
+- 5 behind-the-scenes posts (show the process of building or running the system)
+- 5 results posts (share outcomes, metrics, or transformations)
+
+Rules:
+- Each post should be 100-200 words
+- End each one with a CTA pointing to [platform URL]
+- Use my voice from CLAUDE.md
+- No hashtags. No emojis. No "Follow me for more."
+- Write like a person sharing something useful, not a marketer promoting something
+
+Here's a summary of my platform content for reference:
+[paste your module/lesson titles or key concepts]
+\`\`\`
 
 You now have three weeks of content in about 10 minutes.
 
@@ -2319,22 +2634,28 @@ One audience. One ad. One destination.
 
 The ad copy follows the same principle as your outreach: offer value, don't pitch.
 
+Use this prompt to draft your ad copy:
+
+\`\`\`prompt
+Write a Facebook/LinkedIn ad for my free training platform.
+
+My audience: [who they are — role, industry, company size]
+My platform teaches: [what the training covers]
+The key outcome: [what they'll be able to do after]
+Landing page URL: [your URL]
+
 Framework:
+- Line 1: Call out the audience and their specific pain point
+- Line 2-3: Introduce the free training as the solution
+- Line 4: Tell them what they'll learn (2-3 specific things)
+- Line 5: CTA — it's free, click here
 
-Line 1: Call out the audience and their problem.
-Line 2-3: Introduce the free training as the solution.
-Line 4: Tell them what they'll learn.
-Line 5: CTA.
-
-Example:
-
-"Agency owners: tired of chasing leads manually?
-
-We built a free training that shows you how to build an automated client acquisition system — the kind that books calls for you while you sleep.
-
-You'll learn how to build a lead magnet, set up behavior-based nurture, and fill your calendar with pre-sold prospects.
-
-It's completely free. Link below."
+Rules:
+- Under 125 words total
+- No hype. No fake urgency. No ALL CAPS.
+- No "LIMITED TIME" or "EXCLUSIVE" — it's free and always will be
+- Write like a person recommending something useful, not a marketer selling something
+\`\`\`
 
 No hype. No fake urgency. No "LIMITED TIME ONLY" bullshit. Just a clear offer of free value.
 
@@ -2431,13 +2752,27 @@ Here's why this works so well when you have a Client Engine.
 
 You're not asking for favors. You're not asking them to promote your service. You're offering their audience something genuinely valuable — for free.
 
-"Hey [name],
+Use this prompt to draft personalized partnership pitches:
 
-I built a free training platform that teaches [audience] how to [outcome]. It's completely free — no pitch, no paywall. Just genuinely useful content.
+\`\`\`prompt
+I want to reach out to potential partners who serve the same audience as me but with different services.
 
-Your audience at [their company] would probably find it valuable. Would you be open to sharing it with them? I'm happy to create a custom version, co-brand it, or write a guest piece for your audience that links to it.
+My audience: [who they are]
+My free platform teaches: [what it covers]
+My platform URL: [link]
 
-Let me know if you're interested."
+Write 3 personalized partnership outreach messages for these businesses:
+1. [Partner 1 — name, company, what they do]
+2. [Partner 2 — name, company, what they do]
+3. [Partner 3 — name, company, what they do]
+
+Each message should:
+- Reference something specific about their business
+- Explain what my free platform offers their audience
+- Suggest a specific collaboration (sharing with their community, co-branded version, guest content, etc.)
+- Keep it under 100 words
+- Sound like a peer reaching out, not a salesperson pitching
+\`\`\`
 
 That's not a hard pitch. It's an offer that benefits their audience. Most business owners are constantly looking for valuable resources to share with their community. You're giving them one.
 
@@ -2508,6 +2843,10 @@ You've built a lot of pieces over the last 24 lessons. Platform. Content. Nurtur
 Now it's time to make sure everything actually works together.
 
 This lesson is a pre-launch checklist. Go through it item by item. Don't skip anything. The worst thing you can do is drive traffic to a broken system.
+
+[Download the pre-launch checklist](/lessons/downloads/pre-launch-checklist.md){.download}
+
+> Print this out or open it in a second tab. Check off each item as you test it. Don't go live until every box is checked.
 
 ## The Complete Checklist
 
@@ -2813,7 +3152,9 @@ If people book but don't show up, check the reminder system.
 
 Claude Code makes iteration fast.
 
-"Create an alternative version of the landing page hero section. Keep the same structure but try a different headline and subheadline approach."
+\`\`\`prompt
+Create an alternative version of the landing page hero section. Keep the same layout and structure but try a completely different headline and subheadline approach. The current version emphasizes [current angle]. Try an approach that emphasizes [new angle]. I want to A/B test which one converts better.
+\`\`\`
 
 Deploy version B. Split traffic manually or use Vercel's built-in A/B features. Run for 2 weeks. Pick the winner.
 
@@ -2900,7 +3241,15 @@ Ideas:
 
 Every one of these can be built with Claude Code. The same workflow you used to build the initial platform applies to new features.
 
-"Add a self-assessment quiz to the platform. After completing Module 2, show users a quiz that evaluates their current [process]. Based on their score, display a personalized recommendation. Track the quiz completion and score as behavior events."
+\`\`\`prompt
+Add a self-assessment quiz to the platform. After completing Module 2, show users a 10-question quiz that evaluates their current [process/system]. Each question should be multiple choice. Based on their total score, display one of three personalized recommendations:
+
+- Score 0-3: "You're starting from scratch — here's what to focus on first"
+- Score 4-7: "You have pieces in place — here's what's missing"
+- Score 8-10: "You're close — here's the one thing that would make the biggest difference"
+
+Track the quiz completion and score as behavior events. Send a webhook to GHL with the user's email, score, and recommendation tier.
+\`\`\`
 
 Claude Code builds it. You review it. Deploy. Done.
 

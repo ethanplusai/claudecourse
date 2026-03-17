@@ -18,6 +18,7 @@ model User {
   createdAt     DateTime         @default(now())
   progress      LessonProgress[]
   events        BehaviorEvent[]
+  sendLogs      SendLog[]
 }
 
 model Module {
@@ -61,4 +62,82 @@ model BehaviorEvent {
   metadata  Json?
   createdAt DateTime @default(now())
   user      User     @relation(fields: [userId], references: [id])
+}
+
+// ============================================
+// NURTURE SYSTEM
+// ============================================
+
+model NurtureTemplate {
+  id        String   @id @default(cuid())
+  slug      String   @unique
+  name      String
+  channel   String   // "email" | "sms"
+  subject   String?  // email only
+  body      String
+  variables String[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  steps    AutomationStep[]
+  sendLogs SendLog[]
+}
+
+model Automation {
+  id         String   @id @default(cuid())
+  name       String
+  trigger    String   // "signup" | "lesson_complete" | "stall_check"
+  conditions Json?
+  isActive   Boolean  @default(true)
+  priority   Int      @default(0)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  steps AutomationStep[]
+}
+
+model AutomationStep {
+  id           String  @id @default(cuid())
+  automationId String
+  templateId   String
+  channel      String  @default("auto") // "email" | "sms" | "auto"
+  delayMinutes Int     @default(0)
+  order        Int     @default(0)
+  isActive     Boolean @default(true)
+
+  automation Automation      @relation(fields: [automationId], references: [id], onDelete: Cascade)
+  template   NurtureTemplate @relation(fields: [templateId], references: [id])
+  sendLogs   SendLog[]
+
+  @@unique([automationId, order])
+}
+
+model Setting {
+  id    String @id @default(cuid())
+  key   String @unique
+  value String
+  label String // human readable label
+  group String // "email" | "sms" | "general" | "booking"
+
+  @@index([group])
+}
+
+model SendLog {
+  id           String   @id @default(cuid())
+  userId       String
+  templateId   String
+  stepId       String?
+  channel      String
+  trigger      String
+  status       String   @default("sent")
+  errorMessage String?
+  metadata     Json?
+  createdAt    DateTime @default(now())
+
+  user     User             @relation(fields: [userId], references: [id])
+  template NurtureTemplate  @relation(fields: [templateId], references: [id])
+  step     AutomationStep?  @relation(fields: [stepId], references: [id])
+
+  @@index([userId])
+  @@index([createdAt])
 }
