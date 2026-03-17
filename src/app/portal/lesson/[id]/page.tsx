@@ -250,6 +250,44 @@ export default async function LessonPage({
               </svg>
             </Link>
           </div>
+        ) : lesson.order >= 28 ? (
+          <div className="text-center py-4">
+            <span className="text-sm text-accent flex items-center justify-center gap-2 mb-4">
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2.5}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+              Course Complete
+            </span>
+            <Link
+              href="/portal/review"
+              className="inline-flex items-center gap-2 bg-accent text-white font-medium text-sm px-5 py-2.5 rounded-full hover:bg-accent-hover transition-colors"
+            >
+              Leave Your Feedback
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13 7l5 5m0 0l-5 5m5-5H6"
+                />
+              </svg>
+            </Link>
+          </div>
         ) : (
           <div className="text-center py-4">
             <span className="text-sm text-accent flex items-center justify-center gap-2 mb-3">

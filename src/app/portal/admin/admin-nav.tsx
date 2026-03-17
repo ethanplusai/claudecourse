@@ -9,6 +9,7 @@ const tabs = [
   { label: "Automations", href: "/portal/admin/automations" },
   { label: "Send History", href: "/portal/admin/send-history" },
   { label: "Users", href: "/portal/admin/users" },
+  { label: "Reviews", href: "/portal/admin/reviews" },
   { label: "Settings", href: "/portal/admin/settings" },
 ];
 

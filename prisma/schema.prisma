@@ -19,6 +19,7 @@ model User {
   progress      LessonProgress[]
   events        BehaviorEvent[]
   sendLogs      SendLog[]
+  review        Review?
 }
 
 model Module {
@@ -120,6 +121,19 @@ model Setting {
   group String // "email" | "sms" | "general" | "booking"
 
   @@index([group])
+}
+
+model Review {
+  id        String   @id @default(cuid())
+  userId    String
+  rating    Int      // 1-5
+  feedback  String   // free text
+  canShare  Boolean  @default(false) // permission to use as testimonial
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id])
+
+  @@unique([userId]) // one review per user
 }
 
 model SendLog {
