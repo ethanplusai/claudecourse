@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+/* Hide Next.js dev indicator */
+[data-nextjs-dialog-overlay],
+[data-nextjs-dialog],
+nextjs-portal {
+  display: none !important;
+}
+
 @theme inline {
   --color-bg: #f0eee9;
   --color-bg-card: #f7f6f3;
