@@ -48,7 +48,7 @@ export default async function UsersPage({
   });
 
   // Apply activity filters
-  const now = Date.now();
+  const now = new Date().getTime();
   const sevenDays = 7 * 24 * 60 * 60 * 1000;
 
   const filteredUsers = users.filter((user) => {
