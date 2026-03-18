@@ -55,22 +55,22 @@ const skillCategories = [
   {
     name: "Development",
     skills: ["Next.js Expert", "Prisma Database", "Tailwind UI", "TypeScript Strict", "Debugging"],
-    color: "text-indigo-400",
+    color: "text-accent",
   },
   {
     name: "Marketing",
     skills: ["Email Copy", "Landing Pages", "SEO", "Content", "Analytics"],
-    color: "text-cyan-400",
+    color: "text-accent",
   },
   {
     name: "Business",
     skills: ["Offer Design", "Audience Research", "Competitors", "Project Scoping", "Sales Pages"],
-    color: "text-emerald-400",
+    color: "text-accent",
   },
   {
     name: "Claude Code",
     skills: ["Project Bootstrap", "Code Review", "Refactoring", "Testing", "DevOps"],
-    color: "text-violet-400",
+    color: "text-accent",
   },
 ];
 
@@ -90,7 +90,7 @@ export default function LandingPage() {
             </Link>
             <Link
               href="/signup"
-              className="bg-accent text-white font-medium text-sm px-5 py-2 rounded-full hover:bg-accent-hover transition-colors"
+              className="bg-text text-bg font-medium text-sm px-5 py-2 rounded-full hover:bg-text/90 transition-colors"
             >
               Start Free
             </Link>
@@ -105,13 +105,16 @@ export default function LandingPage() {
             Free &middot; 16 Lessons &middot; 20 Skills Files
           </p>
 
-          <h1 className="text-4xl md:text-5xl font-semibold leading-[1.15] tracking-tight mb-6 text-text">
+          <h1 className="text-4xl md:text-5xl font-semibold leading-[1.15] tracking-tight mb-4 text-text">
             Learn Claude Code by building a real product
           </h1>
 
-          <p className="text-lg text-text-muted leading-relaxed max-w-xl mx-auto mb-10">
-            A free course where you build this exact platform from scratch.
-            No experience needed. Just Claude Code and your keyboard.
+          <p className="text-xl text-text-muted leading-relaxed max-w-xl mx-auto mb-2">
+            ...by building this exact course platform from scratch.
+          </p>
+
+          <p className="text-base text-text-light leading-relaxed max-w-lg mx-auto mb-10">
+            A free, hands-on course. No experience needed. Just Claude Code and your keyboard. You end with a deployed app.
           </p>
 
           <div className="flex flex-col items-center gap-3">
@@ -135,7 +138,7 @@ export default function LandingPage() {
               </svg>
             </Link>
             <span className="text-sm text-text-light">
-              ~8 hours to complete &middot; Deployed app at the end
+              100% free
             </span>
           </div>
         </div>
@@ -364,7 +367,7 @@ export default function LandingPage() {
               </svg>
             </Link>
             <span className="text-sm text-text-light">
-              100% free &middot; No credit card
+              100% free
             </span>
           </div>
         </div>
