@@ -1,10 +1,23 @@
 import { NextResponse } from "next/server";
+import { headers } from "next/headers";
 import bcrypt from "bcryptjs";
 import { prisma } from "@/lib/db";
 import { getSession } from "@/lib/auth";
+import { rateLimit } from "@/lib/rate-limit";
 
 export async function POST(req: Request) {
   try {
+    // Rate limit: 3 signups per minute per IP
+    const headersList = await headers();
+    const ip = headersList.get("x-forwarded-for") || headersList.get("x-real-ip") || "unknown";
+    const { allowed } = rateLimit(ip, 3, 60 * 1000);
+    if (!allowed) {
+      return NextResponse.json(
+        { error: "Too many attempts. Try again in a minute." },
+        { status: 429 }
+      );
+    }
+
     const { name, email, phone, password, contactMethod } = await req.json();
 
     if (!name || !password || !contactMethod) {
