@@ -47,7 +47,7 @@ export default function SignupPage() {
           </div>
           <h1 className="text-xl font-semibold mb-2">Get free access</h1>
           <p className="text-text-muted text-sm">
-            Start building your automated acquisition system.
+            Learn Claude Code by building something real.
           </p>
         </div>
 
