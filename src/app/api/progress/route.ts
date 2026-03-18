@@ -34,26 +34,6 @@ export async function POST(req: Request) {
         return NextResponse.json({ error: "Lesson not found" }, { status: 404 });
       }
 
-      // Verify previous lesson is completed (gating)
-      if (lesson.order > 1) {
-        const prevLesson = await prisma.lesson.findUnique({
-          where: { order: lesson.order - 1 },
-        });
-        if (prevLesson) {
-          const prevProgress = await prisma.lessonProgress.findUnique({
-            where: {
-              userId_lessonId: { userId: user.userId, lessonId: prevLesson.id },
-            },
-          });
-          if (prevProgress?.status !== "completed") {
-            return NextResponse.json(
-              { error: "Complete the previous lesson first" },
-              { status: 403 }
-            );
-          }
-        }
-      }
-
       await prisma.lessonProgress.upsert({
         where: { userId_lessonId: { userId: user.userId, lessonId } },
         create: {

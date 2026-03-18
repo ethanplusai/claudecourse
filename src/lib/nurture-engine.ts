@@ -31,7 +31,7 @@ async function resolveTemplate(
   template: { subject?: string | null; body: string },
   ctx: UserContext
 ): Promise<{ subject?: string; body: string }> {
-  const siteUrl = (await getSetting("NEXT_PUBLIC_SITE_URL")) || "https://clients.wtf";
+  const siteUrl = (await getSetting("NEXT_PUBLIC_SITE_URL")) || "https://claudecourse.wtf";
   const bookingUrl = (await getSetting("BOOKING_URL")) || "https://calendly.com";
 
   const vars: Record<string, string> = {
@@ -103,7 +103,7 @@ async function sendEmail(to: string, subject: string, body: string) {
 
   const { Resend } = await import("resend");
   const resend = new Resend(apiKey);
-  const from = (await getSetting("EMAIL_FROM")) || "The Client Engine <hello@clients.wtf>";
+  const from = (await getSetting("EMAIL_FROM")) || "Claude Course <hello@claudecourse.wtf>";
 
   await resend.emails.send({ from, to, subject, text: body });
 }

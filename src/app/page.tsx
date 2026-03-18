@@ -3,54 +3,75 @@ import Link from "next/link";
 import { Logo } from "@/components/logo";
 
 export const metadata: Metadata = {
-  title: "The Client Engine — Free AI Course: Learn Claude by Building",
+  title: "Claude Course — Free Course: Learn Claude Code by Building",
   description:
-    "Learn Claude Code by building a fully automated client acquisition system. Free hands-on course — no coding experience needed. Build a real platform that generates leads and books calls on autopilot.",
+    "Learn Claude Code by building this exact platform from scratch. 16 lessons, 20 downloadable skills files, no experience needed. Free.",
   alternates: {
-    canonical: "https://clients.wtf",
+    canonical: "https://claudecourse.wtf",
   },
 };
 
 const features = [
   {
-    title: "Built With Claude",
+    title: "Build This Exact Site",
     description:
-      "This entire platform was built with Claude Code. You'll use the same tool to build yours.",
+      "This course platform? You build it. From scratch. Using nothing but Claude Code.",
   },
   {
-    title: "Learn AI By Doing",
+    title: "Learn By Doing",
     description:
-      "No theory. No tutorials. You learn Claude by building a real system that actually makes money.",
+      "No theory. No tutorials. Every lesson has you build a real piece of the platform you're learning on.",
   },
   {
-    title: "Your Own Platform",
+    title: "20 Skills Files",
     description:
-      "Download the boilerplate, customize it with Claude Code, and deploy your own lead generation machine.",
+      "Download Claude Code skills files that make it an expert in Next.js, Prisma, email copy, SEO, and more.",
   },
   {
-    title: "Automated Nurture",
+    title: "Zero Experience Needed",
     description:
-      "Behavior-based email and SMS sequences that warm leads and book calls without you lifting a finger.",
+      "We start with 'what is a terminal' and end with a deployed app. Claude Code writes the code.",
   },
   {
-    title: "Zero Coding Experience",
+    title: "Full Stack in 16 Lessons",
     description:
-      "Claude Code writes the code. You shape the direction. No dev skills required.",
+      "Database, auth, email automation, admin panel, deployment. All built with Claude Code. All yours.",
   },
   {
-    title: "Done-For-You Option",
+    title: "Skills Directory",
     description:
-      "Don't want to build it yourself? We'll deploy the entire system for you.",
+      "20 pre-built skills files across dev, marketing, business, and Claude Code power user categories.",
   },
 ];
 
 const modules = [
-  { num: 1, title: "Foundations of The Client Engine", lessons: 5 },
-  { num: 2, title: "Building Your Lead Magnet", lessons: 5 },
-  { num: 3, title: "The Nurture Engine", lessons: 5 },
-  { num: 4, title: "Calendar and Booking", lessons: 4 },
-  { num: 5, title: "Traffic and Outreach", lessons: 5 },
-  { num: 6, title: "Launch, Optimize, and Scale", lessons: 4 },
+  { num: 1, title: "Getting Started", lessons: 4, desc: "Install Claude Code, first conversation, project setup" },
+  { num: 2, title: "Building", lessons: 6, desc: "Landing page, database, auth, portal, lessons, skills" },
+  { num: 3, title: "Automating", lessons: 4, desc: "Email nurture, tracking, admin panel, SEO" },
+  { num: 4, title: "Launching", lessons: 2, desc: "Deploy to Vercel, scale and grow" },
+];
+
+const skillCategories = [
+  {
+    name: "Development",
+    skills: ["Next.js Expert", "Prisma Database", "Tailwind UI", "TypeScript Strict", "Debugging"],
+    color: "text-indigo-400",
+  },
+  {
+    name: "Marketing",
+    skills: ["Email Copy", "Landing Pages", "SEO", "Content", "Analytics"],
+    color: "text-cyan-400",
+  },
+  {
+    name: "Business",
+    skills: ["Offer Design", "Audience Research", "Competitors", "Project Scoping", "Sales Pages"],
+    color: "text-emerald-400",
+  },
+  {
+    name: "Claude Code",
+    skills: ["Project Bootstrap", "Code Review", "Refactoring", "Testing", "DevOps"],
+    color: "text-violet-400",
+  },
 ];
 
 export default function LandingPage() {
@@ -69,7 +90,7 @@ export default function LandingPage() {
             </Link>
             <Link
               href="/signup"
-              className="bg-text text-bg font-medium text-sm px-5 py-2 rounded-full hover:bg-text/90 transition-colors"
+              className="bg-accent text-white font-medium text-sm px-5 py-2 rounded-full hover:bg-accent-hover transition-colors"
             >
               Start Free
             </Link>
@@ -81,17 +102,16 @@ export default function LandingPage() {
       <section className="pt-44 pb-28 px-6">
         <div className="max-w-2xl mx-auto text-center">
           <p className="text-sm font-medium text-text-muted tracking-wide uppercase mb-6">
-            Free &middot; No Bullshit &middot; Implementation-First
+            Free &middot; 16 Lessons &middot; 20 Skills Files
           </p>
 
           <h1 className="text-4xl md:text-5xl font-semibold leading-[1.15] tracking-tight mb-6 text-text">
-            Learn Claude by building a system that gets you clients
+            Learn Claude Code by building a real product
           </h1>
 
           <p className="text-lg text-text-muted leading-relaxed max-w-xl mx-auto mb-10">
-            A free, hands-on course where you use Claude Code to build a fully
-            automated client acquisition platform — and learn the most
-            important skill in business right now.
+            A free course where you build this exact platform from scratch.
+            No experience needed. Just Claude Code and your keyboard.
           </p>
 
           <div className="flex flex-col items-center gap-3">
@@ -115,7 +135,7 @@ export default function LandingPage() {
               </svg>
             </Link>
             <span className="text-sm text-text-light">
-              100% free &middot; No credit card
+              ~8 hours to complete &middot; Deployed app at the end
             </span>
           </div>
         </div>
@@ -134,12 +154,12 @@ export default function LandingPage() {
               What you&apos;ll build
             </p>
             <h2 className="text-3xl font-semibold tracking-tight mb-4">
-              A real business asset — built entirely with Claude
+              You&apos;re looking at what you&apos;ll build
             </h2>
             <p className="text-text-muted leading-relaxed">
-              By the end of this course, you&apos;ll have your own automated
-              lead generation platform live and running. You&apos;ll also know
-              how to use Claude Code to build damn near anything.
+              This course platform — the database, the auth, the lesson viewer,
+              the email automation, the admin panel — you build all of it. With
+              Claude Code. By the end, it&apos;s deployed and live.
             </p>
           </div>
 
@@ -162,12 +182,11 @@ export default function LandingPage() {
           <div className="text-center mb-14">
             <p className="text-sm font-medium text-accent mb-3">How it works</p>
             <h2 className="text-3xl font-semibold tracking-tight mb-4">
-              You&apos;re inside the product right now
+              Every lesson builds a piece of the platform
             </h2>
             <p className="text-text-muted max-w-lg mx-auto">
-              This platform — the one you&apos;re looking at — was built with
-              Claude Code. You&apos;ll download a copy, customize it for your
-              business, and deploy it as your own lead magnet.
+              You learn Claude Code by using it. Each lesson teaches one thing and
+              has you build one part of this course platform.
             </p>
           </div>
 
@@ -177,10 +196,10 @@ export default function LandingPage() {
                 1
               </span>
               <div>
-                <p className="font-medium text-sm">Learn the system</p>
+                <p className="font-medium text-sm">Install Claude Code</p>
                 <p className="text-sm text-text-muted">
-                  Go through the course. Understand how automated acquisition
-                  works and why this approach beats everything else.
+                  We start from zero. What&apos;s a terminal? How do you install
+                  things? You&apos;ll be up and running in 10 minutes.
                 </p>
               </div>
             </div>
@@ -189,10 +208,10 @@ export default function LandingPage() {
                 2
               </span>
               <div>
-                <p className="font-medium text-sm">Build with Claude Code</p>
+                <p className="font-medium text-sm">Build the platform</p>
                 <p className="text-sm text-text-muted">
-                  Download the boilerplate. Use Claude Code to customize it for
-                  your audience — branding, content, nurture sequences, everything.
+                  Each lesson has you build one feature — landing page, database,
+                  auth, lesson viewer, skills directory, email system.
                 </p>
               </div>
             </div>
@@ -201,10 +220,10 @@ export default function LandingPage() {
                 3
               </span>
               <div>
-                <p className="font-medium text-sm">Deploy and grow</p>
+                <p className="font-medium text-sm">Deploy and own it</p>
                 <p className="text-sm text-text-muted">
-                  Launch your platform. Drive traffic to it. Watch it qualify
-                  leads and book calls on autopilot while you sleep.
+                  Push to GitHub, deploy on Vercel. You now have a live course
+                  platform and know how to build anything with Claude Code.
                 </p>
               </div>
             </div>
@@ -220,10 +239,10 @@ export default function LandingPage() {
               The curriculum
             </p>
             <h2 className="text-3xl font-semibold tracking-tight mb-4">
-              6 modules. 28 lessons. One weekend.
+              4 modules. 16 lessons. One real product.
             </h2>
             <p className="text-text-muted">
-              Sequential modules that build on each other. No skipping ahead.
+              All lessons unlocked after signup. Go at your own pace.
             </p>
           </div>
 
@@ -236,7 +255,10 @@ export default function LandingPage() {
                 <span className="flex-shrink-0 w-7 h-7 rounded-full bg-bg-elevated text-text-muted text-xs font-medium flex items-center justify-center">
                   {m.num}
                 </span>
-                <p className="flex-1 font-medium text-sm">{m.title}</p>
+                <div className="flex-1">
+                  <p className="font-medium text-sm">{m.title}</p>
+                  <p className="text-xs text-text-light">{m.desc}</p>
+                </div>
                 <span className="text-xs text-text-light flex-shrink-0">
                   {m.lessons} lessons
                 </span>
@@ -246,24 +268,87 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Skills Directory */}
+      <section className="py-24 px-6 bg-bg-elevated">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-14">
+            <p className="text-sm font-medium text-accent mb-3">
+              Bonus: Skills directory
+            </p>
+            <h2 className="text-3xl font-semibold tracking-tight mb-4">
+              20 skills files. Drop in. Level up.
+            </h2>
+            <p className="text-text-muted max-w-lg mx-auto">
+              Claude Code skills files are like cheat codes. Drop them in your
+              project and Claude Code becomes an expert in that thing.
+              Free with signup.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-4">
+            {skillCategories.map((cat) => (
+              <div
+                key={cat.name}
+                className="bg-bg-card border border-border rounded-xl p-6"
+              >
+                <h3 className={`font-semibold text-sm mb-3 ${cat.color}`}>
+                  {cat.name}
+                </h3>
+                <ul className="space-y-1.5">
+                  {cat.skills.map((skill) => (
+                    <li key={skill} className="text-sm text-text-muted flex items-center gap-2">
+                      <span className="w-1 h-1 rounded-full bg-text-light flex-shrink-0" />
+                      {skill}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <Link
+              href="/signup"
+              className="inline-flex items-center gap-2 bg-accent text-white font-medium px-6 py-2.5 rounded-full hover:bg-accent-hover transition-colors text-sm"
+            >
+              Get All 20 Skills Files
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Meta Angle */}
+      <section className="py-24 px-6">
+        <div className="max-w-xl mx-auto text-center">
+          <p className="text-sm font-medium text-accent mb-3">The meta part</p>
+          <h2 className="text-3xl font-semibold tracking-tight mb-4">
+            This entire site was built with Claude Code
+          </h2>
+          <p className="text-text-muted leading-relaxed">
+            We&apos;re not just teaching you to use Claude Code. We used it to
+            build this course. Every page, every component, every email template.
+            That&apos;s what you&apos;re about to learn to do.
+          </p>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-28 px-6 bg-bg-elevated">
         <div className="max-w-xl mx-auto text-center">
           <h2 className="text-3xl font-semibold tracking-tight mb-4">
             Stop watching tutorials.
             <br />
-            Build something real.
+            Start building.
           </h2>
           <p className="text-text-muted mb-8 leading-relaxed">
-            Learn Claude by building a system that actually generates revenue.
-            No fluff. No theory. Just execution.
+            16 lessons. 20 skills files. One real product. Free.
           </p>
           <div className="flex flex-col items-center gap-3">
             <Link
               href="/signup"
               className="inline-flex items-center gap-2 bg-accent text-white font-medium px-7 py-3 rounded-full hover:bg-accent-hover transition-colors"
             >
-              Access Free Training
+              Start the Course
               <svg
                 className="w-4 h-4"
                 fill="none"
@@ -292,7 +377,7 @@ export default function LandingPage() {
             <Logo size="small" />
           </span>
           <p className="text-xs text-text-light">
-            &copy; {new Date().getFullYear()} The Client Engine
+            &copy; {new Date().getFullYear()} Claude Course
           </p>
         </div>
       </footer>

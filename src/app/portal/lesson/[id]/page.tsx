@@ -27,23 +27,6 @@ export default async function LessonPage({
 
   if (!lesson) notFound();
 
-  // Check gating — must have completed previous lesson
-  if (lesson.order > 1) {
-    const prevLesson = await prisma.lesson.findUnique({
-      where: { order: lesson.order - 1 },
-    });
-    if (prevLesson) {
-      const prevProgress = await prisma.lessonProgress.findUnique({
-        where: {
-          userId_lessonId: { userId: user.userId, lessonId: prevLesson.id },
-        },
-      });
-      if (prevProgress?.status !== "completed") {
-        redirect("/portal");
-      }
-    }
-  }
-
   // Mark as started if not already
   await prisma.lessonProgress.upsert({
     where: {
@@ -250,7 +233,7 @@ export default async function LessonPage({
               </svg>
             </Link>
           </div>
-        ) : lesson.order >= 28 ? (
+        ) : lesson.order >= 16 ? (
           <div className="text-center py-4">
             <span className="text-sm text-accent flex items-center justify-center gap-2 mb-4">
               <svg

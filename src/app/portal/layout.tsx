@@ -35,6 +35,12 @@ export default async function PortalLayout({
             <Logo size="small" />
           </Link>
           <div className="flex items-center gap-5">
+            <Link
+              href="/portal/skills"
+              className="text-sm text-text-muted hover:text-text transition-colors"
+            >
+              Skills
+            </Link>
             <span className="text-sm text-text-muted hidden sm:block">
               {user.name}
             </span>

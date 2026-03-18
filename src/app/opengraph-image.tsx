@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "The Client Engine — Learn Claude by Building";
+export const alt = "Claude Course — Learn Claude Code by Building";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -10,7 +10,7 @@ export default async function OGImage() {
     (
       <div
         style={{
-          background: "#f0eee9",
+          background: "#0f172a",
           width: "100%",
           height: "100%",
           display: "flex",
@@ -24,18 +24,18 @@ export default async function OGImage() {
           style={{
             fontSize: 28,
             fontWeight: 700,
-            color: "#1a1a1a",
+            color: "#f1f5f9",
             letterSpacing: "-0.5px",
             marginBottom: 40,
           }}
         >
-          The Client Engine®
+          Claude Course
         </div>
         <div
           style={{
             fontSize: 52,
             fontWeight: 600,
-            color: "#1a1a1a",
+            color: "#f1f5f9",
             textAlign: "center",
             lineHeight: 1.2,
             letterSpacing: "-1px",
@@ -43,23 +43,23 @@ export default async function OGImage() {
             marginBottom: 24,
           }}
         >
-          Learn Claude by building a system that gets you clients
+          Learn Claude Code by Building a Real Product
         </div>
         <div
           style={{
             fontSize: 22,
-            color: "#6b6b6b",
+            color: "#94a3b8",
             textAlign: "center",
             maxWidth: 700,
             lineHeight: 1.5,
             marginBottom: 40,
           }}
         >
-          Free hands-on course. No coding experience needed.
+          16 lessons. 20 skills files. No experience needed. Free.
         </div>
         <div
           style={{
-            background: "#c45a3c",
+            background: "#4f46e5",
             color: "white",
             fontSize: 20,
             fontWeight: 500,
