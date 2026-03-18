@@ -9,26 +9,28 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Claude Course — Learn Claude by Building a System That Gets You Clients",
+    default: "Claude Course — Free Course to Learn Claude Code by Building",
     template: "%s | Claude Course",
   },
   description:
-    "A free, hands-on course where you use Claude Code to build a fully automated client acquisition platform. Learn the most important skill in business right now — by building something real.",
+    "Learn Claude Code by building a real course platform from scratch. Free, hands-on, 16 lessons. No coding experience needed. You end with a deployed app.",
   keywords: [
-    "learn Claude",
-    "Claude Code course",
+    "claude course",
+    "learn claude",
+    "claude code course",
+    "free claude course",
+    "claude code tutorial",
+    "learn claude code",
+    "claude ai course",
     "free AI course",
     "learn AI",
-    "client acquisition",
-    "automated lead generation",
-    "AI marketing course",
-    "Claude tutorial",
-    "build with AI",
-    "AI for business",
-    "free Claude course",
-    "Anthropic Claude",
-    "AI automation",
-    "lead generation platform",
+    "build with claude",
+    "claude tutorial",
+    "anthropic claude course",
+    "claude code for beginners",
+    "ai coding course",
+    "build with ai",
+    "claude code free",
   ],
   authors: [{ name: "Claude Course" }],
   creator: "Claude Course",
@@ -42,24 +44,24 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://claudecourse.dev",
     siteName: "Claude Course",
-    title: "Learn Claude by Building a System That Gets You Clients",
+    title: "Learn Claude Code by Building a Real Product",
     description:
-      "Free hands-on course. Use Claude Code to build a fully automated client acquisition platform. No coding experience needed.",
+      "Free course. 16 lessons. Build a full course platform from scratch using Claude Code. No experience needed. You end with a deployed app.",
     images: [
       {
-        url: "/og-image.png",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Claude Course — Learn Claude by Building",
+        alt: "Claude Course — Learn Claude Code by Building",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Learn Claude by Building a System That Gets You Clients",
+    title: "Learn Claude Code by Building a Real Product",
     description:
-      "Free hands-on course. Use Claude Code to build a fully automated client acquisition platform.",
-    images: ["/og-image.png"],
+      "Free course. Build a full platform from scratch using Claude Code. No coding experience needed.",
+    images: ["/opengraph-image"],
   },
   robots: {
     index: true,
@@ -90,7 +92,7 @@ export default function RootLayout({
               "@type": "Course",
               name: "Claude Course",
               description:
-                "A free, hands-on course where you use Claude Code to build a fully automated client acquisition platform. Learn AI by building something real.",
+                "A free, hands-on course where you learn Claude Code by building a real course platform from scratch. 16 lessons, no experience needed, deployed app at the end.",
               provider: {
                 "@type": "Organization",
                 name: "Claude Course",
@@ -106,24 +108,24 @@ export default function RootLayout({
               },
               coursePrerequisites: "No coding experience required",
               educationalLevel: "Beginner",
-              numberOfCredits: 0,
               hasCourseInstance: {
                 "@type": "CourseInstance",
                 courseMode: "Online",
-                courseWorkload: "PT10H",
+                courseWorkload: "PT8H",
               },
               about: [
-                { "@type": "Thing", name: "Artificial Intelligence" },
+                { "@type": "Thing", name: "Claude Code" },
                 { "@type": "Thing", name: "Claude AI" },
-                { "@type": "Thing", name: "Marketing Automation" },
-                { "@type": "Thing", name: "Lead Generation" },
+                { "@type": "Thing", name: "Anthropic Claude" },
+                { "@type": "Thing", name: "AI Development" },
+                { "@type": "Thing", name: "Web Development" },
               ],
               teaches: [
-                "How to use Claude Code to build software",
-                "How to build an automated client acquisition system",
-                "How to create a lead generation platform with AI",
-                "How to set up automated email nurture sequences",
-                "How to deploy a web application",
+                "How to use Claude Code to build web applications",
+                "How to build a course platform with Next.js and Claude Code",
+                "How to set up databases, authentication, and email automation",
+                "How to deploy applications to production",
+                "How to monetize a course platform",
               ],
             }),
           }}
@@ -137,12 +139,7 @@ export default function RootLayout({
               name: "Claude Course",
               url: "https://claudecourse.dev",
               description:
-                "Learn Claude by building a system that gets you clients. Free AI course.",
-              potentialAction: {
-                "@type": "SearchAction",
-                target: "https://claudecourse.dev",
-                "query-input": "required name=search_term_string",
-              },
+                "Free course to learn Claude Code by building a real product. 16 lessons. No experience needed.",
             }),
           }}
         />

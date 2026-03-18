@@ -10,7 +10,7 @@ export default async function OGImage() {
     (
       <div
         style={{
-          background: "#0f172a",
+          background: "#f0eee9",
           width: "100%",
           height: "100%",
           display: "flex",
@@ -24,7 +24,7 @@ export default async function OGImage() {
           style={{
             fontSize: 28,
             fontWeight: 700,
-            color: "#f1f5f9",
+            color: "#1a1a1a",
             letterSpacing: "-0.5px",
             marginBottom: 40,
           }}
@@ -33,9 +33,9 @@ export default async function OGImage() {
         </div>
         <div
           style={{
-            fontSize: 52,
+            fontSize: 48,
             fontWeight: 600,
-            color: "#f1f5f9",
+            color: "#1a1a1a",
             textAlign: "center",
             lineHeight: 1.2,
             letterSpacing: "-1px",
@@ -43,23 +43,23 @@ export default async function OGImage() {
             marginBottom: 24,
           }}
         >
-          Learn Claude Code by Building a Real Product
+          Learn Claude Code by building a real product
         </div>
         <div
           style={{
             fontSize: 22,
-            color: "#94a3b8",
+            color: "#6b6b6b",
             textAlign: "center",
             maxWidth: 700,
             lineHeight: 1.5,
             marginBottom: 40,
           }}
         >
-          16 lessons. 20 skills files. No experience needed. Free.
+          Free course. 16 lessons. No experience needed.
         </div>
         <div
           style={{
-            background: "#4f46e5",
+            background: "#c45a3c",
             color: "white",
             fontSize: 20,
             fontWeight: 500,
@@ -67,7 +67,7 @@ export default async function OGImage() {
             borderRadius: 50,
           }}
         >
-          Start Building — It&apos;s Free
+          Start Building — Free
         </div>
       </div>
     ),
