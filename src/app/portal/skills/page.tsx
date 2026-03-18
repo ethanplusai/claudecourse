@@ -209,7 +209,7 @@ export default function SkillsPage() {
       <div className="space-y-10">
         {categories.map((category) => (
           <div key={category.name}>
-            <h2 className={`text-sm font-semibold mb-4 ${category.color}`}>
+            <h2 className="text-sm font-semibold mb-4 text-text-muted uppercase tracking-wide">
               {category.name}
             </h2>
             <div className="space-y-2">

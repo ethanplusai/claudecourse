@@ -294,7 +294,7 @@ export default function LandingPage() {
                 key={cat.name}
                 className="bg-bg-card border border-border rounded-xl p-6"
               >
-                <h3 className={`font-semibold text-sm mb-3 ${cat.color}`}>
+                <h3 className="font-semibold text-sm mb-3 text-text">
                   {cat.name}
                 </h3>
                 <ul className="space-y-1.5">
