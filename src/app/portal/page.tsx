@@ -76,28 +76,6 @@ export default async function PortalPage() {
         </div>
       </div>
 
-      {/* Consultation CTA */}
-      <div className="bg-bg-warm border border-border rounded-xl p-5 mb-10">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-          <div>
-            <p className="font-medium text-sm mb-0.5">
-              Want this system built for you?
-            </p>
-            <p className="text-sm text-text-muted">
-              We&apos;ll deploy the entire system for your business.
-            </p>
-          </div>
-          <a
-            href="https://calendly.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-medium text-accent hover:underline flex-shrink-0"
-          >
-            Book a consultation &rarr;
-          </a>
-        </div>
-      </div>
-
       {/* Modules */}
       <div>
         <h2 className="text-sm font-medium text-text-muted mb-4 uppercase tracking-wide">
