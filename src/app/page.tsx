@@ -380,7 +380,15 @@ export default function LandingPage() {
             <Logo size="small" />
           </span>
           <p className="text-xs text-text-light">
-            &copy; {new Date().getFullYear()} Claude Course
+            Prompted by{" "}
+            <a
+              href="https://ethanplus.ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-text-muted hover:text-text transition-colors"
+            >
+              Ethan
+            </a>
           </p>
         </div>
       </footer>
