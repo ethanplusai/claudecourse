@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Logo } from "@/components/logo";
+
+export const metadata: Metadata = {
+  title: "The Client Engine — Free AI Course: Learn Claude by Building",
+  description:
+    "Learn Claude Code by building a fully automated client acquisition system. Free hands-on course — no coding experience needed. Build a real platform that generates leads and books calls on autopilot.",
+  alternates: {
+    canonical: "https://clients.wtf",
+  },
+};
 
 const features = [
   {

@@ -1,0 +1,9 @@
+# The Client Engine — robots.txt
+User-agent: *
+Allow: /
+Disallow: /portal/
+Disallow: /login
+Disallow: /signup
+Disallow: /api/
+
+Sitemap: https://clients.wtf/sitemap.xml
