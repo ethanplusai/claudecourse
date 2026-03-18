@@ -52,7 +52,7 @@ export async function POST(req: Request) {
     session.role = user.role;
     await session.save();
 
-    return NextResponse.json({ success: true });
+    return NextResponse.json({ success: true, role: user.role });
   } catch (error) {
     console.error("Login error:", error);
     return NextResponse.json({ error: "Something went wrong" }, { status: 500 });

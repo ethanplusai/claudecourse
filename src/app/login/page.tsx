@@ -31,7 +31,12 @@ export default function LoginPage() {
       return;
     }
 
-    router.push("/portal");
+    // Use window.location for full page reload so server picks up the session cookie
+    if (data.role === "admin") {
+      window.location.href = "/portal/admin";
+    } else {
+      window.location.href = "/portal";
+    }
   }
 
   return (
