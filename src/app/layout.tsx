@@ -33,14 +33,14 @@ export const metadata: Metadata = {
   authors: [{ name: "Claude Course" }],
   creator: "Claude Course",
   publisher: "Claude Course",
-  metadataBase: new URL("https://claudecourse.wtf"),
+  metadataBase: new URL("https://claudecourse.dev"),
   alternates: {
-    canonical: "https://claudecourse.wtf",
+    canonical: "https://claudecourse.dev",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://claudecourse.wtf",
+    url: "https://claudecourse.dev",
     siteName: "Claude Course",
     title: "Learn Claude by Building a System That Gets You Clients",
     description:
@@ -94,9 +94,9 @@ export default function RootLayout({
               provider: {
                 "@type": "Organization",
                 name: "Claude Course",
-                url: "https://claudecourse.wtf",
+                url: "https://claudecourse.dev",
               },
-              url: "https://claudecourse.wtf",
+              url: "https://claudecourse.dev",
               isAccessibleForFree: true,
               offers: {
                 "@type": "Offer",
@@ -135,12 +135,12 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               name: "Claude Course",
-              url: "https://claudecourse.wtf",
+              url: "https://claudecourse.dev",
               description:
                 "Learn Claude by building a system that gets you clients. Free AI course.",
               potentialAction: {
                 "@type": "SearchAction",
-                target: "https://claudecourse.wtf",
+                target: "https://claudecourse.dev",
                 "query-input": "required name=search_term_string",
               },
             }),

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Learn Claude Code by building this exact platform from scratch. 16 lessons, 20 downloadable skills files, no experience needed. Free.",
   alternates: {
-    canonical: "https://claudecourse.wtf",
+    canonical: "https://claudecourse.dev",
   },
 };
 

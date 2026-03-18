@@ -7,7 +7,7 @@ const sampleData: Record<string, string> = {
   lessonsCompleted: "12",
   totalLessons: "28",
   nextLessonTitle: "Cold Outreach That Leads With Value",
-  portalUrl: "https://claudecourse.wtf/portal",
+  portalUrl: "https://claudecourse.dev/portal",
   bookingUrl: "https://calendly.com",
 };
 
