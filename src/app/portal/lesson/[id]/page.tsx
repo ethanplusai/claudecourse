@@ -4,6 +4,7 @@ import { getCurrentUser } from "@/lib/auth";
 import { redirect, notFound } from "next/navigation";
 import { MarkCompleteButton } from "./mark-complete";
 import { LessonTracker } from "./tracker";
+import { ChecklistButton } from "@/components/checklist-modal";
 
 export default async function LessonPage({
   params,
@@ -89,6 +90,9 @@ export default async function LessonPage({
         }
 
         // Headers
+        if (trimmed.startsWith("### ")) {
+          return `<h3>${trimmed.slice(4)}</h3>`;
+        }
         if (trimmed.startsWith("## ")) {
           return `<h2>${trimmed.slice(3)}</h2>`;
         }
@@ -99,6 +103,42 @@ export default async function LessonPage({
           if (match) {
             return `<figure class="lesson-figure"><img src="${match[2]}" alt="${match[1]}" loading="lazy" />${match[1] ? `<figcaption>${match[1]}</figcaption>` : ""}</figure>`;
           }
+        }
+
+        // Blocks containing checklist items: - [ ] text or - [x] text
+        if (trimmed.match(/- \[[ x]\] /)) {
+          const lines = trimmed.split("\n");
+          let html = "";
+          let inChecklist = false;
+
+          for (const line of lines) {
+            const checkMatch = line.match(/^- \[([ x])\] (.+)$/);
+            const h3Match = line.match(/^### (.+)$/);
+
+            if (h3Match) {
+              if (inChecklist) {
+                html += "</div>";
+                inChecklist = false;
+              }
+              html += `<h3>${h3Match[1]}</h3>`;
+            } else if (checkMatch) {
+              if (!inChecklist) {
+                html += '<div class="checklist">';
+                inChecklist = true;
+              }
+              const checked = checkMatch[1] === "x";
+              const id = `check-${Math.random().toString(36).slice(2, 8)}`;
+              html += `<label class="checklist-item"><input type="checkbox" ${checked ? "checked" : ""} /><span>${checkMatch[2]}</span></label>`;
+            } else if (line.trim()) {
+              if (inChecklist) {
+                html += "</div>";
+                inChecklist = false;
+              }
+              html += `<p>${line}</p>`;
+            }
+          }
+          if (inChecklist) html += "</div>";
+          return html;
         }
 
         // Callout blocks: > text
@@ -187,9 +227,16 @@ export default async function LessonPage({
 
       {/* Content */}
       <div
-        className="lesson-content max-w-2xl mb-16"
+        className="lesson-content max-w-2xl mb-8"
         dangerouslySetInnerHTML={{ __html: renderContent(lesson.content) }}
       />
+
+      {/* Checklist button for the testing lesson */}
+      {lesson.title === "Testing Everything" && (
+        <div className="max-w-2xl mb-16">
+          <ChecklistButton />
+        </div>
+      )}
 
       {/* Mark complete / Next lesson */}
       <div className="max-w-2xl border-t border-border pt-8">
