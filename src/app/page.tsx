@@ -5,7 +5,7 @@ import { Logo } from "@/components/logo";
 export const metadata: Metadata = {
   title: "Claude Course — Free Course: Learn Claude Code by Building",
   description:
-    "Learn Claude Code by building this exact platform from scratch. 16 lessons, 20 downloadable skills files, no experience needed. Free.",
+    "Learn Claude Code by building this exact platform from scratch. 17 lessons, 20 downloadable skills files, no experience needed. Free.",
   alternates: {
     canonical: "https://claudecourse.dev",
   },
@@ -33,14 +33,14 @@ const features = [
       "We start with 'what is a terminal' and end with a deployed app. Claude Code writes the code.",
   },
   {
-    title: "Full Stack in 16 Lessons",
+    title: "Full Stack in 17 Lessons",
     description:
       "Database, auth, email automation, admin panel, deployment. All built with Claude Code. All yours.",
   },
   {
-    title: "Skills Directory",
+    title: "Deploy to Production",
     description:
-      "20 pre-built skills files across dev, marketing, business, and Claude Code power user categories.",
+      "Ship your platform to the internet with Vercel. Custom domain, SSL, the works. Live and ready for users.",
   },
 ];
 
@@ -48,7 +48,7 @@ const modules = [
   { num: 1, title: "Getting Started", lessons: 4, desc: "Install Claude Code, first conversation, project setup" },
   { num: 2, title: "Building", lessons: 6, desc: "Landing page, database, auth, portal, lessons, skills" },
   { num: 3, title: "Automating", lessons: 4, desc: "Email nurture, tracking, admin panel, SEO" },
-  { num: 4, title: "Launching", lessons: 2, desc: "Deploy to Vercel, scale and grow" },
+  { num: 4, title: "Launching", lessons: 3, desc: "Deploy to Vercel, test everything, scale and grow" },
 ];
 
 const skillCategories = [
@@ -102,7 +102,7 @@ export default function LandingPage() {
       <section className="pt-44 pb-28 px-6">
         <div className="max-w-2xl mx-auto text-center">
           <p className="text-sm font-medium text-text-muted tracking-wide uppercase mb-6">
-            Free &middot; 16 Lessons &middot; 20 Skills Files
+            Free &middot; 17 Lessons &middot; 20 Skills Files
           </p>
 
           <h1 className="text-4xl md:text-5xl font-semibold leading-[1.15] tracking-tight mb-4 text-text">
@@ -251,7 +251,7 @@ export default function LandingPage() {
               The curriculum
             </p>
             <h2 className="text-3xl font-semibold tracking-tight mb-4">
-              4 modules. 16 lessons. One real product.
+              4 modules. 17 lessons. One real product.
             </h2>
             <p className="text-text-muted">
               All lessons unlocked after signup. Go at your own pace.
@@ -353,7 +353,7 @@ export default function LandingPage() {
             Start building.
           </h2>
           <p className="text-text-muted mb-8 leading-relaxed">
-            16 lessons. 20 skills files. One real product. Free.
+            17 lessons. 20 skills files. One real product. Free.
           </p>
           <div className="flex flex-col items-center gap-3">
             <Link
