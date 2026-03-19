@@ -161,14 +161,14 @@ export default function LandingPage() {
       {/* What You'll Build */}
       <section className="py-24 px-6">
         <div className="max-w-5xl mx-auto">
-          <div className="max-w-xl mb-14">
+          <div className="text-center mb-14">
             <p className="text-sm font-medium text-accent mb-3">
               What you&apos;ll build
             </p>
             <h2 className="text-3xl font-semibold tracking-tight mb-4">
               You&apos;re looking at what you&apos;ll build
             </h2>
-            <p className="text-text-muted leading-relaxed">
+            <p className="text-text-muted leading-relaxed max-w-xl mx-auto">
               This course platform — the database, the auth, the lesson viewer,
               the email automation, the admin panel — you build all of it. With
               Claude Code. By the end, it&apos;s deployed and live.
