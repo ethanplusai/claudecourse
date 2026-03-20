@@ -142,14 +142,6 @@ export default function LandingPage() {
             </span>
           </div>
 
-          <a
-            href="https://claude.ai/referral/mHzho1ZqIw"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm text-text-light hover:text-accent transition-colors mt-8 inline-block"
-          >
-            Don&apos;t have Claude yet? Get a free week of Pro &rarr;
-          </a>
         </div>
       </section>
 
